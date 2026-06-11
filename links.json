@@ -1,8 +1,6 @@
 {
   "separators": ["-", "/"],
   "links": {
-    "google": "https://google.com",
-    "github": "https://github.com",
-    "docs": "https://docs.github.com"
+    "dpop-ppt": "https://docs.google.com/presentation/d/1A5itn_Mr-YFLmjQ_AFINb0awMltvJsh47P6VwUqacVM"
   }
 }
