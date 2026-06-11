@@ -1,0 +1,8 @@
+{
+  "separators": ["-", "/"],
+  "links": {
+    "google": "https://google.com",
+    "github": "https://github.com",
+    "docs": "https://docs.github.com"
+  }
+}
