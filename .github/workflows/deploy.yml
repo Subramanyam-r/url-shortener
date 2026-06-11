@@ -1,0 +1,29 @@
+name: Deploy URL Shortener
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate Redirects
+        uses: zziger/url-shortener-action@v1.1
+        with:
+          json: './links.json'
+          path: './public'
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './public'
+
+      - name: Deploy
+        uses: actions/deploy-pages@v4
